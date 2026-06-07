@@ -10,4 +10,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'name':"Mohid",
+        'skill':"Flutter"
+    }
+    return render(request, 'index.html',context)
