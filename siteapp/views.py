@@ -10,8 +10,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    context = {
-        'name':"Mohid",
-        'skill':"Flutter"
-    }
-    return render(request, 'index.html',context)
+    
+    return render(request, 'index.html')
+
+
+def counter(request):
+    text=request.GET['text']
+    words=len(text.split())
+    return render(request,'counter.html',{
+        'amount':words
+    })
