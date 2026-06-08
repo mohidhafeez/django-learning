@@ -6,7 +6,8 @@
     <title>Hello World</title>
   </head>
   <body>
-    <form action="counter" method="">
+    <form action="counter" method="POST">
+      {% csrf_token %}
       <textarea name="text"></textarea>
       <input type="submit" />
     </form>
