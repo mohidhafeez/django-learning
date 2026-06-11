@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,5 +11,31 @@
       <textarea name="text"></textarea>
       <input type="submit" />
     </form>
+  </body>
+</html> -->
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome To My Project</h1>
+
+    {% for feature in features %}
+
+    <div>
+      <h2 style="color: blue">{{feature.name}}</h2>
+
+      <h2>{{feature.description}}</h2>
+      <br />
+    </div>
+
+    {% endfor %}
   </body>
 </html>
